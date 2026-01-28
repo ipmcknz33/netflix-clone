@@ -1,0 +1,26 @@
+import React from "react";
+import "./Home.css";
+import NavBar from "../../components/NavBar/NavBar";
+import hero_banner from "../../assets/hero_banner.jpg";
+import hero_title from "../../assets/hero_title.png";
+
+const Home = () => {
+  return (
+    <div className="home">
+      <NavBar />
+      <div className="hero">
+        <img src={hero_banner} alt="" className="banner-image" />
+        <div className="hero-caption">
+          <img src={hero_title} alt="" className="caption-img" />
+          <p>
+            Discover his ties to a secrect order, a young man living in modern
+            Istanbul embarks on a quest to save the city from an imortal
+            enemy.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
