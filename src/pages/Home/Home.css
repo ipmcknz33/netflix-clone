@@ -1,37 +1,43 @@
-.hero{
-    position: relative
-    ;
+.hero {
+    position: relative;
 }
-.banner-image{
+
+.banner-image {
     width: 100%;
     mask-image: linear-gradient(to right, transparent, black 75%);
     -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
 }
-.hero-caption{
+
+.hero-caption {
     position: absolute;
     width: 100%;
     padding: 6%;
     bottom: 0;
 }
-.hero-caption p{
+
+.hero-caption p {
     max-width: 700px;
     font-size: 17px;
     margin-bottom: 20px;
 }
-.caption-img{
+
+.caption-img {
     width: 90%;
     max-width: 420px;
     margin-bottom: 30px;
 }
-.hero-btns{
+
+.hero-btns {
     display: flex;
     gap: 10px;
     margin-bottom: 50px;
 }
-.hero-btns .btn img{
+
+.hero-btns .btn img {
     width: 25px;
 }
-.hero-btns .btn{
+
+.hero-btns .btn {
     border: 0px;
     outline: 0px;
     padding: 8px;
@@ -44,21 +50,79 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.hero-btns .btn.dark-btn{
+
+.hero-btns .btn.dark-btn {
     color: white;
     background: rgba(109, 109, 110, 0.7);
 }
-.hero-btns .btn.dark-btn:hover{
+
+.hero-btns .btn.dark-btn:hover {
     background: rgba(109, 109, 110, 0.4);
 }
-.hero-btns .btn:hover{
+
+.hero-btns .btn:hover {
     background: #ffffffbf;
 }
-.more-cards{
+
+.more-cards {
     padding-left: 6%;
 }
-.more-cards h2{
+
+.more-cards h2 {
     margin-bottom: 8px;
 }
 
+@media (max-width: 1024px) {
+    .hero-caption .title-cards {
+        display: none;
+    }
+
+    .hero-btns {
+        margin-bottom: 30px;
+    }
+}
+
+    @media (max-width: 800px) {
+        .hero-caption {
+            padding-left: 4%;
+        }
+
+        .caption-img {
+            margin-bottom: 10px;
+            width: 40%;
+        }
+
+        .hero-caption p {
+            font-size: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        .hero-btns .btn img {
+            width: 20px;
+
+        }
+
+        .more-cards {
+            padding-left: 4%;
+        }
+
+    }
+
+    @media (max-width: 500px) {
+        .caption-img {
+            display: none;
+
+        }
+
+        .hero-btns .btn img {
+            width: 15px;
+        }
+
+        .hero-btns .btn {
+            padding: 4px, 10px;
+            gap: 5px;
+            font-size: 10px;
+        }
+    }
 

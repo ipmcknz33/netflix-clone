@@ -5,14 +5,12 @@ import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
 import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
+import { logout } from "../../firebase";
 
 const NavBar = () => {
   const navRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
     const handleScroll = () => {
       if (!navRef.current) return;
 
@@ -23,6 +21,8 @@ const NavBar = () => {
       }
     };
 
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -50,7 +50,13 @@ const NavBar = () => {
           <img src={caret_icon} alt="Menu" className="caret" />
 
           <div className="dropdown">
-            <p>Sign out of Netflix</p>
+            <p
+              onClick={() => {
+                logout();
+              }}
+            >
+              Sign out of Netflix
+            </p>
           </div>
         </div>
       </div>
