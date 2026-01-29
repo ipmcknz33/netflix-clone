@@ -6,7 +6,11 @@
     position: fixed;
     font-size: 14px;
     color: #e5e5e5;
-    background-image: linear-gradient(180)deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.7) 10%,
+        transparent
+    );
     z-index: 1;
 }
 
@@ -29,19 +33,24 @@
 .navbar-left ul li {
     cursor: pointer;
 }
+
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.navbar-right .icon {
+
+/* 🔧 class name FIX (matches JSX: className="icons") */
+.navbar-right .icons {
     width: 20px;
     cursor: pointer;
 }
-.navbar-right .profile{
+
+.navbar-right .profile {
     width: 35px;
     border-radius: 4px;
 }
+
 .navbar-profile {
     display: flex;
     align-items: center;
@@ -49,6 +58,7 @@
     cursor: pointer;
     position: relative;
 }
+
 .navbar .dropdown {
     position: absolute;
     top: 100%;
@@ -61,10 +71,16 @@
     z-index: 1;
     display: none;
 }
+
 .navbar .dropdown p {
     font-size: 13px;
     cursor: pointer;
 }
+
 .navbar-profile:hover .dropdown {
     display: block;
+}
+
+.nav-dark {
+    background: #141414;
 }
